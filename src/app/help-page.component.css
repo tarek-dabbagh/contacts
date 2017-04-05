@@ -1,0 +1,70 @@
+
+.title {
+  font-size: 24px;
+  font-size: 3vw;
+  color: green;
+}
+
+.help {
+   border: 2px solid black;
+   font-size: 12px;
+}
+
+.help th, .help td {
+  border: 1px solid black;
+   width: 10em;
+   height: 2em;
+   text-align:center;
+   font-size: 12px;
+   font-size: 2vw;
+}  
+
+input[type=text].textToSearch {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: white;
+  background-image: url('assets/images/search.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}      
+
+ .contactDelete {
+      width: 2em;
+      text-align: center;
+}
+
+
+.addContact {
+  width: 2em;
+}
+ 
+ 
+.navButtons{
+  font-size: 12px;
+} 
+
+.nav-button {
+  float: right;
+  font-size: 12px;
+  width: 12em;
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.router{
+  font-size: 12px;
+  width: 27em;
+}

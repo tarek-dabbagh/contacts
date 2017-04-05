@@ -1,0 +1,62 @@
+.contactDetailsHeader{
+	color: green;
+  font-size: 24px;
+  font-size: 3vw;
+}
+	
+#contactDetails {
+  font-size: 12px;
+}
+	
+.label {
+  font-size: 12px;
+  font-size: 2vw;
+	display: inline-block;
+	width: 6em;
+	color: #369;
+	text-style: bold;
+}
+	
+.data {
+  font-size: 12px;
+  font-size: 2vw;
+	width: 20em;
+	padding-left: 1em;
+}
+	
+.buttons {
+  font-size: 12px;
+}
+
+.button, .nav-button {
+  float: right;
+  background-color: #369;
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.nav-button{
+  background-color: green;
+}
+
+.errorMessage {
+  font-size: 12px;
+  width:27em;
+  color: #f00;
+  text-align: center;
+  padding-top:1em;
+  padding-bottom:1em;
+  border: 1px solid #f00;
+}
+
+.clearFloat{
+  clear: both;
+}  

@@ -1,0 +1,97 @@
+    .selected {
+      background-color: #369;
+      color: white;
+    }
+    
+  .title{
+    color:green;
+    font-size: 24px;
+    font-size: 3vw;
+  }    
+
+  .contactList {
+    border: 2px solid black;
+  }
+    
+	.contactDelete, .contactHeader, .contactName, .contactPhone {
+    font-size: 12px;
+    font-size: 2vw;
+		border: 1px solid black;
+		padding:  0.25em;
+    }
+    
+    .contactName {
+      width: 10em;
+    }
+    
+    .contactPhone {
+      width: 8em;
+    }
+    
+    .contactDelete {
+      width: 2em;
+    }
+	
+	.contactHeader {
+		text-style: bold;
+    color: #369;
+	}
+	
+.addContact {
+  cursor: pointer;
+}
+
+.search {
+  text-align: left;
+}
+
+input[type=text].textToSearch {
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: white;
+  background-image: url('assets/images/search.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+}      
+
+	
+	
+.contactDelete {
+	text-align: center;
+}
+	
+	
+.warning {
+	color: red;
+	padding-top: 2em;
+	text-style: bold;
+}
+	
+.navButtons{
+  font-size: 12px;
+}
+
+.nav-button {
+  float: right;
+  font-size: 12px;
+  width: 10em;
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.clearFloat{
+  clear: both;
+}

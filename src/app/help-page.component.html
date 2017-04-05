@@ -1,0 +1,32 @@
+
+<h2 class="title">Help Page</h2>
+<table name="help" class="help">
+<tr>
+
+<tr>
+<th>Symbol</th>
+<th>What it does</th>
+</tr>
+
+<tr>
+<td><input class="textToSearch" type="text"  placeholder="search contacts by name" /></td>
+<td>Filter Contacts</td>  
+</tr>
+
+<tr>
+<td><span class="addContact"><img src="assets/images/insert.png"  title="Add New Contact"/></span></td>
+<td>Add New Contact</td>
+</tr>
+
+<tr>
+ <td class="contactDelete"><button class="delete">x</button></td> 
+ <td>Delete contact</td>
+</tr>
+
+
+</table>
+
+ <!-- adjust navButtons width to help table's width -->
+  <div name="navButtons" [class.navButtons] = "adjustWidth()"> 
+<input type="button" class="nav-button" (click)="goHome()"     value="Go Home"/>
+</div>

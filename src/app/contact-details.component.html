@@ -1,0 +1,73 @@
+  <!-- contact Details, display if modify or add flags are set  -->
+	<div>
+  
+    <!-- display if modify flag is set -->
+		<h2 *ngIf="modifyFlag" class="contactDetailsHeader">View/Edit Contact Details</h2>
+    
+    <!-- display if add flag is set -->
+		<h2 *ngIf="addFlag" class="contactDetailsHeader">Add New Contact Details</h2>
+
+    
+	  
+	  <form>
+	    <table id="contactDetails">
+      <tr>      
+	    <td><label class="label">First Name:</label></td>
+	    <td><input class="data"       name="otherNames"   type="text"    (change)="validateOtherNames()" 	
+              [(ngModel)] = "selectedContact.otherNames" placeholder="First Name"/></td>
+      </tr>  
+		  <tr> 
+		  <td><label class="label">Last Name:</label></td>
+	    <td><input class="data" type="text" name="surName"      (change)="validateSurName()"  		
+              [(ngModel)] = "selectedContact.surName"    placeholder="SurName" /></td>
+	 	  </tr> 
+	    <tr> 
+	    <td><label class="label">Company:</label></td>
+	    <td><input class="data" type="text" name="company"      (change)="validateCompany()"  	
+              [(ngModel)] = "selectedContact.company" placeholder="Company Name" /></td>
+		  </tr>
+			<tr>	  
+	    <td><label class="label">Email:</label></td>
+	    <td><input  class="data" type="text" name="email"       (change)="validateEmail()"  	
+              [(ngModel)] = "selectedContact.email" placeholder="Email Address" /></td>
+		  </tr>
+		  <tr>
+	    <td><label class="label">Phone:</label></td>
+	    <td><input class="data" type="text" name="phone"        (change)="validatePhone()" 		 
+              [(ngModel)] = "selectedContact.phone" placeholder="Phone Number" /></td>
+		  </tr>
+	    <tr>
+      <td><label class="label">Address:</label></td>
+	    <td><input class="data" type="text" name="address"      (change)="validateAddress()"  	
+              [(ngModel)] = "selectedContact.address" placeholder="Address" /></td>
+		  </tr>
+        
+      
+      
+    <!-- display error message - if error flag set -->
+    <tr><td colspan="2" *ngIf="errorFlag" class="errorMessage" >{{ errorMessage }}</td></tr>
+    </table> 
+    
+    <!-- set width to form's  width -->
+    <div name="buttonsContainer" [class.buttons] = "adjustWidth('buttonsContainer')"> 
+    
+      <!-- display if add flag is set -->
+      <div  *ngIf="addFlag" class="buttons" >
+        <input class="button" type="button" name="addContact" (click)="addContact()"  value="Add Contact" />
+        <input class="button" type="button"  name="resetNew" (click)="resetNew()"      value="Reset Form" />
+      </div>
+    
+      <!-- display if modify flag is set -->
+      <div  *ngIf="modifyFlag" class="buttons">
+        <input class="button" type="button" name="updateContact" (click)="updateContact()" value="Modify Contact" />
+        <input class="button" type="button" name="resetUpdate" (click)="resetUpdate()" value="Reset Data" />
+      </div>
+    </div>
+    <br class="clearFloat"/>
+    <div name="navButtons" [class.buttons] = "adjustWidth('navButtons')">
+      <input class="nav-button" type="button"  name="goHome"      (click)="goHome()"        value="Go Home" />
+    </div>
+    </form>  
+	</div>
+  
+  

@@ -1,3 +1,50 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngIf="displayIsOn">  
+  <h2 class="title">Contacts List</h2>
+	<table name="contactList" class="contactList">
+    <tr>
+    <th class="search" colspan="2">
+      <input class="textToSearch" type="text" name="textToSearch" (keyup)="searchContacts()" [(ngModel)] = "textToSearch"   placeholder="search contacts by name" />
+    </th>
+     <th (click)="gotoDetails(0)"  class="addContact" title="Add New Contact"><img src="assets/images/insert.png" /></th>
+	</tr>
+ 
+	<tr>
+	  <th class="contactHeader">Name</th>
+	  <th class="contactHeader">Phone</th>
+	  <th class="contactDelete">Del</th>
+	  
+	  
+		
+	  </tr>
+ 
+      <!-- display all contacts --> 
+      <tr *ngFor="let contact of contacts"
+        [class.selected]="contact === selectedContact"
+        (click)="onSelect(contact)">
+	    <td class="contactName">{{contact.otherNames}} {{contact.surName}}</td>
+      <td class="contactPhone">{{contact.phone}}</td>
+      <td class="contactDelete"><button class="delete" (click)="deleteConfirmation(contact)">x</button></td>
+      </tr>
+    </table>	
+    
+      
+    <!-- display if delete flag is set -->  
+    <div class="warning" *ngIf="deleteFlag">
+	   Delete {{selectedContact.otherNames + " " +  selectedContact.surName}}'s Record?
+	   <label for="radio1">Yes</label> 
+	   <input type="radio" name="confirm" id="radio1"  (click) = "deleteContact(selectedContact); $event.stopPropagation()" />
+	   <label for="radio2">No</label> 
+	   <input type="radio" name="confirm" id="radio2"  (click) = "cancelDelete()" />
+	</div>
+  
+  <!-- adjust navButtons width to contactList width -->
+  <div name="navButtons" [class.navButtons] = "adjustWidth()"> 
+  <input *ngIf="selectedContact" type="button" class="nav-button" (click)="gotoDetails(selectedContact.id)"  value="Edit Contact"/>
+  <input type="button" class="nav-button" (click)="gotoHelp()"     value="Get Help"/> 
+  <br class="clearFloat" />
+  </div>
+</div>
+  
+<router-outlet></router-outlet> 
+  
+  
